@@ -1,0 +1,44 @@
+.HotelSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: scroll;
+    margin-top: 50px;
+
+   
+  }
+  .Title{
+    position: fixed;
+    top: 12px;
+  }
+  .HotelSection__Img {
+    border-radius: 12px;
+    width: 90%;
+    height: 260px;
+  }
+  
+  .HotelSection__RoomList {
+    background-color: rgb(255, 255, 254);
+    border: 1px solid;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 12px;
+    &:hover{
+      background: linear-gradient(to bottom , lightblue, lightgreen);
+    }
+  }
+  
+  .HotelSection__btn {
+    height: 20px;
+    border-radius: 12px;
+    background: linear-gradient(to right, rgb(129, 196, 207), rgb(252, 252, 252));
+  }
+  
+  .HotelSection__price {
+    color: rgb(62, 62, 213);
+  }
+  
