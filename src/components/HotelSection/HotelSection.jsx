@@ -1,7 +1,12 @@
+import { useRouter } from "next/router";
 import styles from "./HotelSection.module.scss";
 import { roomList } from "@/mocks/reservation";
 
 const HotelSection = () => {
+  const router = useRouter();
+
+  const onHandlePages = (id) => router.push(`/hotel/${id}`);
+
   const onHotelRender = () => {
     return roomList?.map(
       ({
@@ -14,8 +19,9 @@ const HotelSection = () => {
         roomsAvailable,
       }) => (
         <div
+          onClick={() => onHandlePages(id)}
           className={styles.HotelSection__RoomList}
-          
+         
         >
           <img
             className={styles.HotelSection__Img}
@@ -45,8 +51,9 @@ const HotelSection = () => {
   };
   return (
     <div className={styles.HotelSection}>
-        <h1 className={styles.Title}>SEZIONE HOTEL</h1>
+      <h1 className={styles.Title}>SEZIONE HOTEL</h1>
       {roomList.length ? onHotelRender() : <p>Loading...</p>}
+      
     </div>
   );
 };
