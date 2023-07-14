@@ -10,6 +10,7 @@ const DefaultLayout = ({children})=>{
                 <Link href="/about-us">About</Link>
                 <Link href="/">Home</Link>
                 <Link href="/hotel">Hotel</Link>
+                <Link href="/products">Prodotti</Link>
             </div>
             {children}
             <div className={styles.footer}>Copyright @ Claudio Ventimiglia <a href="https://www.instagram.com/">🐧</a></div>
