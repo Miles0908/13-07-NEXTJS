@@ -14,7 +14,7 @@ export default function (props) {
       <hr />
       {props.data.products.map((product) => (
         <>
-          <p className={styles.ProductsPara}  onClick={()=>onHandlePage(product.id)}>
+          <p  className={styles.ProductsPara}  onClick={()=>onHandlePage(product.id)}>
           <img src={product.thumbnail} alt="ProductImg" className={styles.ProductsImg} />
             {product.title} - <b className={styles.ProductsPrice}>${product.price}</b> - n°:{product.stock}
           </p>
