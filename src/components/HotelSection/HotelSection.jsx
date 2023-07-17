@@ -2,7 +2,9 @@ import { useRouter } from "next/router";
 import styles from "./HotelSection.module.scss";
 import { roomList } from "@/mocks/reservation";
 
+
 const HotelSection = () => {
+
   const router = useRouter();
 
   const onHandlePages = (id) => router.push(`/hotel/${id}`);
@@ -21,7 +23,6 @@ const HotelSection = () => {
         <div
           onClick={() => onHandlePages(id)}
           className={styles.HotelSection__RoomList}
-         
         >
           <img
             className={styles.HotelSection__Img}
@@ -53,7 +54,6 @@ const HotelSection = () => {
     <div className={styles.HotelSection}>
       <h1 className={styles.Title}>SEZIONE HOTEL</h1>
       {roomList.length ? onHotelRender() : <p>Loading...</p>}
-      
     </div>
   );
 };
